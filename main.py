@@ -4,6 +4,7 @@ from graphic_arts.start_game_banner import run_screensaver
 
 
 def attack(char_name: str, char_class: str) -> str:
+    """Функция attack используется для подсчета урона противнику."""
     if char_class == 'warrior':
         return (f'{char_name} нанёс урон'
                 f' противнику равный {5 + randint(3, 5)}')
@@ -17,6 +18,7 @@ def attack(char_name: str, char_class: str) -> str:
 
 
 def defence(char_name: str, char_class: str) -> str:
+    """Функция defence используется для подсчета блокированного урона."""
     if char_class == 'warrior':
         return (f'{char_name} '
                 f'блокировал {10 + randint(5, 10)} урона')
@@ -30,6 +32,7 @@ def defence(char_name: str, char_class: str) -> str:
 
 
 def special(char_name: str, char_class: str) -> str:
+    """Функция special используется для подсчета специального умения."""
     if char_class == 'warrior':
         return (f'{char_name} применил'
                 f' специальное умение «Выносливость {80 + 25}»')
@@ -43,6 +46,7 @@ def special(char_name: str, char_class: str) -> str:
 
 
 def start_training(char_name: str, char_class: str) -> str:
+    """Функция start_training используется для тренировки в игре."""
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель '
               f'— отличный боец ближнего боя.')
@@ -54,7 +58,7 @@ def start_training(char_name: str, char_class: str) -> str:
               f'— чародей, способный исцелять раны.')
     print('Потренируйся управлять своими навыками.')
     print('Введи одну из команд:'
-          'attack — чтобы атаковать противника, defence — чтобы'
+          'attack — чтобы атаковать противника, defence — чтобы '
           'блокировать атаку противника или special — '
           'чтобы использовать свою суперсилу.')
     print('Если не хочешь тренироваться, введи команду skip.')
@@ -71,6 +75,7 @@ def start_training(char_name: str, char_class: str) -> str:
 
 
 def choice_char_class() -> str:
+    """Функция start_training используется для выбора персонажа в игре."""
     approve_choice: str = ''
     char_class: str = ''
     while approve_choice != 'y':
